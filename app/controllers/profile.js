@@ -14,16 +14,18 @@ export default Ember.Controller.extend({
 	actions: {
 		setName(newName) {
 			this.set('model.name', newName);
+			this.send('saveModel');
+		},
+		setColor(newColor) {
+			this.set('model.color', newColor);
+			this.send('saveModel');
+		},
+		saveModel() {
 			this.get('model').save().then(()=> {
 				alert('Promise fulfilled - the model was saved.');
 			}).catch(()=> {
 				alert('Promise rejected or error caught.');
 			});
-		},
-		setColor(newColor) {
-			this.set('model.color', newColor);
-			this.get('model').save();
-			alert('The model was saved.');
 		}
 	}
 });
