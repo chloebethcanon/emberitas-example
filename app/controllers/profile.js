@@ -22,9 +22,9 @@ export default Ember.Controller.extend({
 		},
 		saveModel() {
 			this.get('model').save().then(()=> {
-				alert('Promise fulfilled - the model was saved.');
+				console.log('Promise fulfilled - the model was saved.');
 			}).catch(()=> {
-				alert('Promise rejected or error caught.');
+				console.log('Promise rejected or error caught.');
 			});
 		}
 	}
