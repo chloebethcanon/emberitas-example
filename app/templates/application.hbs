@@ -1,13 +1,13 @@
 <h1 style="color: {{color}};">Welcome to Ember, {{name}}!</h1>
 
-<label>Change Name:</label>
 <form {{action "setName" newName on="submit"}}>
+	<label>Change Name:</label>
 	{{input value=newName}}
 	<button>Submit</button>
 </form>
 
-<label>Change Color:</label>
 <form {{action "setColor" newColor on="submit"}}>
+	<label>Change Color:</label>
 	{{input value=newColor}}
 	<button>Submit</button>
 </form>
