@@ -1,0 +1,6 @@
+<h1>Welcome to Ember, {{name}}!</h1>
+
+<form {{action "setName" newName on="submit"}}>
+	{{input value=newName}}
+	<button>Submit</button>
+</form>
