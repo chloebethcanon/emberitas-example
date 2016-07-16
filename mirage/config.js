@@ -5,11 +5,9 @@ export default function() {
 
   this.patch('/users/:id');
 
-  /* example of throwing an error so you can test asyncronous functions:
+  // Example of throwing an error so you can test asyncronous functions:
 
-  this.patch('/users/:id', {}, 401)
-  
-  */
+  /* this.patch('/users/:id', {}, 401) */
 
   this.del('/users/:id');
 
