@@ -1,4 +1,14 @@
 export default function() {
+  this.get('/users');
+
+  this.get('/users/:id');
+
+  this.patch('/users/:id');
+
+  this.del('/users/:id');
+
+  this.post('/users');
+
 
   // These comments are here to help you get started. Feel free to delete them.
 
