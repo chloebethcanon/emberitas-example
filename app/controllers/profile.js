@@ -25,6 +25,8 @@ export default Ember.Controller.extend({
 				console.log('Promise fulfilled - the model was saved.');
 			}).catch(()=> {
 				console.log('Promise rejected or error caught.');
+			}).finally(()=> {
+				console.log('This happens whether the promise thens or catches.');
 			});
 		}
 	}
