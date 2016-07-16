@@ -14,9 +14,13 @@ export default Ember.Controller.extend({
 	actions: {
 		setName(newName) {
 			this.set('model.name', newName);
+			this.get('model').save();
+			alert('The model was saved.');
 		},
 		setColor(newColor) {
 			this.set('model.color', newColor);
+			this.get('model').save();
+			alert('The model was saved.');
 		}
 	}
 });
