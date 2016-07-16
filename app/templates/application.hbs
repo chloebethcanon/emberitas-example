@@ -1,5 +1,7 @@
 <h1 style="color: {{color}};">Welcome to Ember, {{name}}!</h1>
 
+<p>{{someInformation}}</p>
+
 <form {{action "setName" newName on="submit"}}>
 	<label>Change Name:</label>
 	{{input value=newName}}
