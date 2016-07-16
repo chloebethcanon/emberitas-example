@@ -1,10 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-	name: 'Chloe',
-	color: 'green',
-	someInformation: Ember.computed('name', 'color', function(){
-		return 'Your name is ' + this.get('name') + ' and your favorite color is ' + this.get('color') + ".";
+	name: '',
+	color: Ember.computed.readOnly('model.color'),
+	someInformation: Ember.computed('model.name', 'model.color', function(){
+		return 'Your name is ' + this.get('model.name') + ' and your favorite color is ' + this.get('model.color') + ".";
 	}),
 	colorStyle: Ember.computed('color', function(){
 		// Not necessarily browser compatible
@@ -13,10 +13,10 @@ export default Ember.Controller.extend({
 	}),
 	actions: {
 		setName(newName) {
-			this.set('name', newName);
+			this.set('model.name', newName);
 		},
 		setColor(newColor) {
-			this.set('color', newColor);
+			this.set('model.color', newColor);
 		}
 	}
 });
